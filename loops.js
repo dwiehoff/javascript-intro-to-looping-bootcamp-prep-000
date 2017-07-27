@@ -28,14 +28,14 @@ function whileLoop(n) { // 3
   return 'done'
 }
 
-function maybeTrue() {
-  return Math.random() >= 0.5
-}
-
 // loop body executed at least once
 function doWhileLoop(array) {
+  function maybeTrue() {
+    return Math.random() >= 0.5
+  }
+
   do {
-    array.pop();
+    array.pop(); // or array = array.slice(1)
   } while (array.length > 0 || maybeTrue());
   return array;
 }
